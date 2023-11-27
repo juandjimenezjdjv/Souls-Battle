@@ -1,0 +1,61 @@
+# Project: BA2
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = AAmain.o AMenu.o ZValidaciones.o Lectoras.o Nacimiento.o FechaYHora.o ZArbolHumanos.o PublicacionRedes.o Condenacion.o Escrituras.o Salvacion.o AVL.o
+LINKOBJ  = AAmain.o AMenu.o ZValidaciones.o Lectoras.o Nacimiento.o FechaYHora.o ZArbolHumanos.o PublicacionRedes.o Condenacion.o Escrituras.o Salvacion.o AVL.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = BA2.exe
+CXXFLAGS = $(CXXINCS) -std=c++11
+CFLAGS   = $(INCS) -std=c++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+AAmain.o: AAmain.cpp
+	$(CPP) -c AAmain.cpp -o AAmain.o $(CXXFLAGS)
+
+AMenu.o: AMenu.cpp
+	$(CPP) -c AMenu.cpp -o AMenu.o $(CXXFLAGS)
+
+ZValidaciones.o: ZValidaciones.cpp
+	$(CPP) -c ZValidaciones.cpp -o ZValidaciones.o $(CXXFLAGS)
+
+Lectoras.o: Lectoras.cpp
+	$(CPP) -c Lectoras.cpp -o Lectoras.o $(CXXFLAGS)
+
+Nacimiento.o: Nacimiento.cpp
+	$(CPP) -c Nacimiento.cpp -o Nacimiento.o $(CXXFLAGS)
+
+FechaYHora.o: FechaYHora.cpp
+	$(CPP) -c FechaYHora.cpp -o FechaYHora.o $(CXXFLAGS)
+
+ZArbolHumanos.o: ZArbolHumanos.cpp
+	$(CPP) -c ZArbolHumanos.cpp -o ZArbolHumanos.o $(CXXFLAGS)
+
+PublicacionRedes.o: PublicacionRedes.cpp
+	$(CPP) -c PublicacionRedes.cpp -o PublicacionRedes.o $(CXXFLAGS)
+
+Condenacion.o: Condenacion.cpp
+	$(CPP) -c Condenacion.cpp -o Condenacion.o $(CXXFLAGS)
+
+Escrituras.o: Escrituras.cpp
+	$(CPP) -c Escrituras.cpp -o Escrituras.o $(CXXFLAGS)
+
+Salvacion.o: Salvacion.cpp
+	$(CPP) -c Salvacion.cpp -o Salvacion.o $(CXXFLAGS)
+
+AVL.o: AVL.cpp
+	$(CPP) -c AVL.cpp -o AVL.o $(CXXFLAGS)
